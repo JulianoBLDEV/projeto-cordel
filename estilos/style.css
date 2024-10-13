@@ -1,0 +1,90 @@
+@charset "UTF-8";
+
+*{
+    margin: 0px;
+    padding: 0px;
+}
+@import url('https://fonts.googleapis.com/css2?family=Passion+One:wght@400;700;900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Sriracha&display=swap');
+
+:root{
+    --fonte1: verdana, georgia, tahoma, sans-serif;
+    --fonte2: "Passion One", cursive;
+    --fonte3: "Sriracha", cursive;
+}
+
+html, body{
+    min-height: 100vh;
+    background-color: darkgray;
+    font-family: var(--fonte1);
+}
+
+header, footer{
+    background-color: black;
+    color: white;
+    text-align: center;
+    padding: 10px;
+}
+
+a{
+    color: white;
+    font-weight: bold;
+    text-decoration: none;
+}
+a:hover{
+    text-decoration: underline;
+}
+
+header>H1{
+    padding-top: 40px;
+    font-variant: small-caps; /* Deixa todas as letras em Caixa Alta, mas a Primeira de cada Frase em destaque*/
+    /* text-transform: uppercase; -> Deixa todas as Letras em Caixa Alta*/
+    font-family: var(--fonte2);
+    font-size: 10vw;/*Altura do texto em 10% a largura do viewport*/
+}
+header>p{
+    padding-bottom: 40px;
+}
+
+section{
+    padding-top: 10vh; /*Padding superior de 10% da altura da viewport*/
+    padding-bottom: 10vh; /* Padding inferior de 10% da altira da viwport*/
+    /*esse conjunto de padding's faz com que a box das section se ajuste em altura conforme a viewport, e faz com que fique 2section por rolagem de tela*/
+    line-height: 2em; /*Espaçamento entre linhas me 2x o tamanho padrão do texto*/
+    padding-left: 30px;
+    font-family: var(--fonte3);
+    font-size: 3.5vw;/*Altura do texto em 10% a largura do viewport*/
+}
+
+section>p{
+    padding-bottom: 2em;
+}
+
+section.comum{
+    background-color: snow;
+    color: black;
+    
+}
+section.imagem{
+    background-color: rgb(51,51,51);
+    color: snow;
+    background-size: cover;
+    background-attachment: fixed;
+    box-shadow: inset 6px 6px 13px 0px rgba(0, 0, 0, 0.300);
+    
+}
+section.imagem>p{
+    background-color: rgba(0,0,0,0.400);
+    display: inline-block; /*faz com que seja um box-inline, ou seja, vai ser adaptar ao conteúdo, e não ocupar a viewport como uum box-inlevel*/
+    padding: 10px;
+    text-shadow: 1px 1px 0px black;
+}
+
+section#img1{
+    background-image: url('../imagens/background001.jpg');
+    background-position: right center;
+}
+section#img2{
+    background-image: url('../imagens/background002.jpg');
+}
+
